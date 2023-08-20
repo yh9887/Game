@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./게임.js" defer></script>
+    <script src="https://kit.fontawesome.com/d8947ffdf2.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .wrap {
+            width: 650px;
+            height: 400px;
+            border-radius: 15px;
+            background: url(./carrot/img/background.png) center / cover;
+            border: 3px solid;
+            margin: 150px auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            height: 50%;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+
+        .start {
+            width: 40px;
+            height: 40px;
+            line-height: 28px;
+            color: black;
+            background-color: lightsalmon;
+            border: 3px solid;
+            border-radius: 7px;
+            font-size: 17px;
+            box-sizing: border-box;
+            margin-top: 20px;
+
+        }
+
+        .sec {
+            background-color: rgb(255, 219, 205);
+            border: 3px solid;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            margin-top: 5px;
+            visibility: hidden;
+            user-select: none;
+            cursor: auto;
+
+        }
+
+        .gameTimer {
+            width: 70px;
+            height: 30px;
+            font-size: 20px;
+            border: 3px solid;
+            border-radius: 5px;
+            text-align: center;
+
+            background-color: white;
+
+            margin-top: 5px;
+            visibility: hidden;
+            user-select: none;
+            cursor: auto;
+        }
+
+
+
+        .field {
+            width: 100%;
+            height: 70%;
+            position: relative;
+        }
+
+        .popup {
+            width: 400px;
+            height: 80px;
+            background-color: #00000090;
+            color: white;
+            text-align: center;
+            margin: 0 AUTO;
+            box-sizing: border-box;
+            border-radius: 13px;
+            padding: 10px;
+            transform: translateY(-150%);
+            display: block;
+        }
+
+        .pop-up--hide {
+            display: none;
+        }
+
+        .popup_refresh {
+            width: 40px;
+            height: 40px;
+            font-size: 15px;
+            background-color: wheat;
+            border: 2px solid black;
+            border-radius: 50%;
+            color: black;
+            margin: 0 auto;
+        }
+
+        .carrot, .bug{
+            transition: transform 100ms ease-in;
+            cursor: pointer;
+        }
+        .bug:hover , .carrot:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+
+        <div class="header">
+            <button class="start">
+                <i class="fa-solid fa-play"></i>
+            </button>
+            <span class="gameTimer">00:00</span>
+            <span class="sec"></span>
+        </div>
+
+        <div class="field"></div>
+
+        <div class="popup pop-up--hide ">
+            <button class="popup_refresh">
+                <i class="fa-solid fa-rotate-right"></i>
+            </button>
+            <span class="popup_masage">Hello</span>
+        </div>
+
+
+
+    </div>
+
+</body>
+
+</html>
